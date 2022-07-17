@@ -2,7 +2,7 @@ import {SuccessMessage} from "../utils/message.mjs";
 import _ from "lodash";
 
 export default () => {
-    return new SuccessMessage('请求成功！',[
+    return [
         {
             label: 'Level one 1',
             children: [
@@ -58,5 +58,5 @@ export default () => {
                 },
             ],
         },
-    ]).toJson()
+    ]
 }

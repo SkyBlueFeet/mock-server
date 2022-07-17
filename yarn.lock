@@ -214,6 +214,11 @@ chalk@^5.0.1:
   resolved "https://registry.npmjs.org/chalk/-/chalk-5.0.1.tgz#ca57d71e82bb534a296df63bbacc4a1c22b2a4b6"
   integrity sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==
 
+charenc@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
+  integrity sha512-yrLQ/yVUFXkzg7EDQsPieE/53+0RlaWTs+wBrvW36cyilJ2SaDWfl4Yj7MtLTXleV9uEKefbAGUPv2/iWSooRA==
+
 chokidar@^3.5.2:
   version "3.5.3"
   resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
@@ -366,6 +371,11 @@ cross-spawn@^6.0.5:
     semver "^5.5.0"
     shebang-command "^1.2.0"
     which "^1.2.9"
+
+crypt@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
+  integrity sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow==
 
 crypto-random-string@^2.0.0:
   version "2.0.0"
@@ -637,6 +647,11 @@ get-intrinsic@^1.0.2:
     has "^1.0.3"
     has-symbols "^1.0.3"
 
+get-routes@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.npmjs.org/get-routes/-/get-routes-2.1.6.tgz#eff22a0fe3ef3b365e864f224c3b4ef0eafb8417"
+  integrity sha512-1ZuTu2Xudre7pRHdotieKpNkYNl1Ia2k3y7BEmfMRp2q1130DbfH9/mJ3HZfOcJj4MbcWFBTiDivT7sJv37vwQ==
+
 get-stream@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/get-stream/-/get-stream-4.1.0.tgz#c1b255575f3dc21d59bfc79cd3d2b46b1c3a54b5"
@@ -803,6 +818,11 @@ is-binary-path@~2.1.0:
   integrity sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==
   dependencies:
     binary-extensions "^2.0.0"
+
+is-buffer@~1.1.6:
+  version "1.1.6"
+  resolved "https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
+  integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
 
 is-ci@^2.0.0:
   version "2.0.0"
@@ -1015,6 +1035,15 @@ make-dir@^3.0.0:
   integrity sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==
   dependencies:
     semver "^6.0.0"
+
+md5@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/md5/-/md5-2.3.0.tgz#c3da9a6aae3a30b46b7b0c349b87b110dc3bda4f"
+  integrity sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g==
+  dependencies:
+    charenc "0.0.2"
+    crypt "0.0.2"
+    is-buffer "~1.1.6"
 
 media-typer@0.3.0:
   version "0.3.0"

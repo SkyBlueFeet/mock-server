@@ -1,6 +1,7 @@
 import express from 'express'
 import path from 'path'
 import _ from 'lodash'
+import { getRoutes, rewriteUse } from './get-route.mjs'
 
 /**
  *
@@ -8,6 +9,8 @@ import _ from 'lodash'
  */
 export function createRouter (handlerFunc) {
   const router = new express.Router()
+
+ const getRouter= rewriteUse(router)
 
   if (_.isFunction(handlerFunc)) {
     handlerFunc(router)

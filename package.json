@@ -20,8 +20,10 @@
     "dayjs": "^1.11.3",
     "express": "^4.18.1",
     "fast-glob": "^3.2.11",
+    "get-routes": "^2.1.6",
     "json-server": "^0.17.0",
     "lodash": "^4.17.21",
+    "md5": "^2.3.0",
     "nodemon": "^2.0.19",
     "patch-package": "^6.4.7",
     "shelljs": "^0.8.5"

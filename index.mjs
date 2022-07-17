@@ -4,17 +4,28 @@ import Glob from 'fast-glob'
 import _ from 'lodash'
 import path from 'path'
 import consola from 'consola'
+
+
 import { __dirname, readJson } from './utils/files.mjs'
 import { resolveJsonServer } from './json.mjs'
 import { mountHandlers, loadMiddleWaves, loadRoute } from './load.mjs'
+import {rewriteUse,getRoutes} from './utils/get-route.mjs'
 // import StaticServe from ''
 
 // 加载配置
 const mockConfig = await readJson('.mock.config.json')
+
+// 默认的json文件
 const dbPath = _.get(mockConfig, 'db', 'db.json')
+
+// 静态文件夹
 const publicPath = _.get(mockConfig, 'public', 'public')
+
+// 路由映射
 const jsonRouter = _.get(mockConfig, 'router')
 
+
+// faker数据
 const _fakerPath = _.get(mockConfig, 'faker', ['faker'])
 
 const fakerPath = _.isArray(_fakerPath)
@@ -23,11 +34,15 @@ const fakerPath = _.isArray(_fakerPath)
 
 const _middleWares = _.get(mockConfig, 'middlewares', ['middlewares'])
 
+//  中间件
 const middleWareDirs = _.isArray(_middleWares)
   ? _middleWares
   : [_middleWares].filter(i => !!i)
 
 const server = jsonServer.create()
+
+const json= rewriteUse(server)
+
 
 server.use(jsonServer.bodyParser)
 
@@ -54,6 +69,11 @@ const middlewares = jsonServer.defaults({
 server.use(middlewares)
 
 await mountHandlers(server, ['handlers'])
+
+// server.get('/',(req,res)=>{
+//   // const routes=getRoutes()
+//   res.send([])
+// })
 
 server.get('/echo', (req, res) => {
   res.jsonp(req.query)
